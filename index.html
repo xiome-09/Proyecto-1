@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro Estudiantil</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h2>REGISTRO ESTUDIANTIL</h2>
+
+    <form id="studentForm">
+      <div class="form-group">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" placeholder="Ingrese nombre completo">
+      </div>
+
+      <div class="form-group">
+        <label for="nie">NIE:</label>
+        <input type="text" id="nie" placeholder="Ingrese NIE">
+      </div>
+
+      <div class="form-group">
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" min="1" placeholder="Ej. 16">
+      </div>
+
+      <div class="form-group">
+        <label for="grado">Grado:</label>
+        <select id="grado">
+          <option value="">Seleccionar</option>
+          <option value="1.er Desarrollo de Software">1.er Desarrollo de Software</option>
+          <option value="2.o Desarrollo de Software">2.o Desarrollo de Software</option>
+          <option value="3.er Desarrollo de Software">3.er Desarrollo de Software</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="seccion">Sección:</label>
+        <select id="seccion">
+          <option value="">Seleccionar</option>
+          <option value="A">Sección A</option>
+          <option value="B">Sección B</option>
+          <option value="C">Sección C</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" placeholder="correo@ejemplo.com">
+      </div>
+
+      <div class="form-group">
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" placeholder="70000000">
+      </div>
+
+      <button type="submit" class="btn btn-primary">REGISTRAR ESTUDIANTE</button>
+    </form>
+
+    <div class="actions">
+      <button id="btnDownload" class="btn btn-success">DESCARGAR ESTUDIANTES.TXT</button>
+      
+      <label for="fileInput" class="btn btn-secondary">CARGAR ARCHIVO TXT</label>
+      <input type="file" id="fileInput" accept=".txt">
+    </div>
+
+    <h3>Estudiantes Registrados</h3>
+    <table id="studentsTable">
+      <thead>
+        <tr>
+          <th>Código</th>
+          <th>Nombre</th>
+          <th>NIE</th>
+          <th>Edad</th>
+          <th>Grado</th>
+          <th>Sección</th>
+          <th>Correo</th>
+          <th>Teléfono</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Se llena dinámicamente -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
